@@ -1,0 +1,2 @@
+lerna run format
+lerna run lint

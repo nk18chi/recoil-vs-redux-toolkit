@@ -11,7 +11,14 @@
       "disableSubjectLowerCase": true
     }
   },
+  "dependencies": {
+    "prettier": "^3.3.3"
+  },
   "devDependencies": {
+    "husky": "^9.1.4",
     "lerna": "^8.0.1"
+  },
+  "scripts": {
+    "prepare": "husky"
   }
 }
