@@ -21,5 +21,13 @@
     "airbnb-typescript",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "react"]
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "**/test-utils/*", "vitest.*"]
+      }
+    ]
+  }
 }
