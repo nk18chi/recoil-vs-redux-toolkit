@@ -1,7 +1,7 @@
 import React from 'react';
-import ToDoList from '@/components/Recoil/ToDoList/ToDoList';
+import ToDoList from '@/components/ToDoList/ToDoList';
 import { Stack, Title } from '@mantine/core';
-import ToDoStats from '@/components/Recoil/ToDoStats/ToDoStats';
+import ToDoStats from '@/components/ToDoStats/ToDoStats';
 
 function RecoilPage() {
   return (

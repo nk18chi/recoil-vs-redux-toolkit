@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { screen } from '../../../test-utils';
-import render from '../../../test-utils/render';
+import { screen } from '../../test-utils';
+import render from '../../test-utils/render';
 import ToDoStats from './ToDoStats';
 
 describe('ToDoStats component', () => {
