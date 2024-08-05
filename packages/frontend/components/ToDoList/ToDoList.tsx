@@ -8,7 +8,7 @@ import { Stack, Text, Checkbox, ActionIcon } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { IconTrash } from '@tabler/icons-react';
-import classes from './index.module.css';
+import classes from './ToDoList.module.css';
 
 enum Category {
   Work = 'Work',
