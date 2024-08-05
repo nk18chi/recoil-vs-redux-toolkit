@@ -1,5 +1,4 @@
 .item {
-  min-width: 400px;
   display: flex;
   align-items: center;
   border-radius: var(--mantine-radius-md);
