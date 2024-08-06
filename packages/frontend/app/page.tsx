@@ -2,6 +2,7 @@ import React from 'react';
 import ToDoList from '@/components/ToDoList/ToDoList';
 import { Stack, Title } from '@mantine/core';
 import ToDoStats from '@/components/ToDoStats/ToDoStats';
+import ToDoSearchInput from '@/components/ToDoSearchInput/ToDoSearchInput';
 
 function RecoilPage() {
   return (
@@ -14,6 +15,7 @@ function RecoilPage() {
     >
       <Title className="text-center">ToDo List with Recoil</Title>
       <ToDoStats />
+      <ToDoSearchInput />
       <ToDoList />
     </Stack>
   );
