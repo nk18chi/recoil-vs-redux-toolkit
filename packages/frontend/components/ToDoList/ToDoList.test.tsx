@@ -1,7 +1,6 @@
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { screen } from '../../test-utils';
-import render from '../../test-utils/render';
+import { screen, render } from '../../test-utils';
 import ToDoList from './ToDoList';
 
 describe('ToDoList component', () => {
