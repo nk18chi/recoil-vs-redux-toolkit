@@ -19,4 +19,7 @@ describe('ToDoStats component', () => {
     expect(screen.getByText('Overdue Tasks')).toBeInTheDocument();
     expect(screen.getByText('2')).toBeDefined();
   });
+  it.todo('Should update the stats when adding a task');
+  it.todo('Should update the stats when removing a task');
+  it.todo('Should not update the stats even when filtering tasks');
 });
