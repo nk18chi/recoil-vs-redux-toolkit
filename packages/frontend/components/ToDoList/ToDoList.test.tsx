@@ -4,21 +4,6 @@ import { screen, render } from '../../test-utils';
 import ToDoList from './ToDoList';
 
 describe('ToDoList component', () => {
-  beforeEach(() => {
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: vi.fn().mockImplementation((query) => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addListener: vi.fn(),
-        removeListener: vi.fn(),
-        addEventListener: vi.fn(),
-        removeEventListener: vi.fn(),
-        dispatchEvent: vi.fn(),
-      })),
-    });
-  });
   it('Should show default todo list', () => {
     render(<ToDoList />);
     expect(screen.getByText('Finish the Project')).toBeInTheDocument();
