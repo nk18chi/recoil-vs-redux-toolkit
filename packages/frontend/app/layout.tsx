@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import RecoilProvider from '@/providers/RecoilProvider';
 import theme from '@/theme';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -27,7 +28,9 @@ export default function RootLayout({
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no" />
       </head>
       <body className={inter.className}>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <RecoilProvider>{children}</RecoilProvider>
+        </MantineProvider>
       </body>
     </html>
   );

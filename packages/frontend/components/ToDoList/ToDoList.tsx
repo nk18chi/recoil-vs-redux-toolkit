@@ -5,29 +5,17 @@
 import React from 'react';
 import cx from 'clsx';
 import { Stack, Text, Checkbox, ActionIcon } from '@mantine/core';
-import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { IconTrash } from '@tabler/icons-react';
+import { useRecoilState } from 'recoil';
+import todoListState from '../../state-managements/todoListState.recoil';
 import classes from './ToDoList.module.css';
-
-enum Category {
-  Work = 'Work',
-  Personal = 'Personal',
-  Other = 'Other',
-}
-
-const data = [
-  { id: 1, title: 'Finish the Project', category: Category.Work, dueDate: '2024-12-15', completed: true },
-  { id: 2, title: 'Send the Report', category: Category.Work, dueDate: '2024-12-20', completed: false },
-  { id: 3, title: 'Buy Groceries', category: Category.Personal, dueDate: '2024-12-23', completed: false },
-  { id: 4, title: 'Read a Book', category: Category.Personal, dueDate: '2022-12-28', completed: false },
-  { id: 5, title: 'Clean the House', category: Category.Personal, dueDate: '2022-12-31', completed: false },
-];
+import ToDoListClass from '../../classes/ToDoList/ToDoList.class';
 
 function ToDoList() {
-  const [state, handlers] = useListState(data);
+  const [todoList, setTodoList] = useRecoilState(todoListState);
 
-  const items = state.map((item, index) => (
+  const items = todoList.map((item, index) => (
     <Draggable key={item.id} index={index} draggableId={item.id.toString()}>
       {(provided, snapshot) => (
         <div
@@ -40,7 +28,12 @@ function ToDoList() {
           <Stack gap="0">
             <Text td={item.completed ? 'line-through' : ''}>{item.title}</Text>
             <Text c="dimmed" size="sm">
-              Category: {item.category} • DueDate: {item.dueDate}
+              {[
+                `Category: ${item.category}`,
+                item.dueDate ? `DueDate: ${item.dueDate.toISOString().split('T')[0]}` : null,
+              ]
+                .filter((element) => Boolean(element))
+                .join(' • ')}
             </Text>
           </Stack>
           <ActionIcon variant="white" aria-label="Delete" className="ml-auto">
@@ -53,7 +46,9 @@ function ToDoList() {
 
   return (
     <DragDropContext
-      onDragEnd={({ destination, source }) => handlers.reorder({ from: source.index, to: destination?.index || 0 })}
+      onDragEnd={({ destination, source }) => {
+        setTodoList(ToDoListClass.reorder({ todo: todoList, from: source.index, to: destination?.index || 0 }));
+      }}
     >
       <Droppable droppableId="dnd-list" direction="vertical">
         {(provided) => (
