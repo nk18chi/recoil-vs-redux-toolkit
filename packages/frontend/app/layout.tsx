@@ -7,6 +7,7 @@ import './globals.css';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import RecoilProvider from '@/providers/RecoilProvider';
 import theme from '@/theme';
+import { DatesProvider } from '@mantine/dates';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,7 +30,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <MantineProvider theme={theme}>
-          <RecoilProvider>{children}</RecoilProvider>
+          <DatesProvider settings={{ timezone: 'UTC' }}>
+            <RecoilProvider>{children}</RecoilProvider>
+          </DatesProvider>
         </MantineProvider>
       </body>
     </html>
