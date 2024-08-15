@@ -8,7 +8,7 @@ import { Stack, Text, Checkbox, ActionIcon } from '@mantine/core';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { IconTrash } from '@tabler/icons-react';
 import { useRecoilState } from 'recoil';
-import todoListState from '../../state-managements/todoListState.recoil';
+import todoListState from '../../state-managements/ToDoListState.recoil';
 import classes from './ToDoList.module.css';
 import ToDoListClass from '../../classes/ToDoList/ToDoList.class';
 

@@ -7,7 +7,7 @@ interface IToDo {
   completed: boolean;
   position: number;
   createdAt: Date;
-  dueDate?: Date;
+  dueDate?: Date | null;
 }
 
 export default IToDo;

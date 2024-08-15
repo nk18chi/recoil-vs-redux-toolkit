@@ -11,7 +11,7 @@ import { DateInput } from '@mantine/dates';
 interface IToDoForm {
   title: string;
   category: ToDoCategory;
-  dueDate: Date | null;
+  dueDate?: Date | null;
 }
 
 interface ToDoFormProps {
