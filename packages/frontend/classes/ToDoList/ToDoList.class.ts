@@ -15,6 +15,10 @@ class ToDoList {
     cloned.splice(to, 0, item);
     return cloned;
   }
+
+  public static removeItem(todo: IToDo[], index: number): IToDo[] {
+    return [...todo.slice(0, index), ...todo.slice(index + 1)];
+  }
 }
 
 export default ToDoList;

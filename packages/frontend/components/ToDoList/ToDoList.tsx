@@ -4,13 +4,13 @@
 
 import React from 'react';
 import cx from 'clsx';
-import { Stack, Text, Checkbox, ActionIcon } from '@mantine/core';
+import { Stack, Text, Checkbox } from '@mantine/core';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
-import { IconTrash } from '@tabler/icons-react';
 import { useRecoilState } from 'recoil';
 import todoListState from '../../state-managements/ToDoListState.recoil';
 import classes from './ToDoList.module.css';
 import ToDoListClass from '../../classes/ToDoList/ToDoList.class';
+import ToDoDeleteIcon from '../ToDoDeleteIcon/ToDoDeleteIcon';
 
 function ToDoList() {
   const [todoList, setTodoList] = useRecoilState(todoListState);
@@ -36,9 +36,11 @@ function ToDoList() {
                 .join(' • ')}
             </Text>
           </Stack>
-          <ActionIcon variant="white" aria-label="Delete" className="ml-auto">
-            <IconTrash style={{ width: '70%', height: '70%' }} stroke={1.5} />
-          </ActionIcon>
+          <ToDoDeleteIcon
+            onClick={() => {
+              setTodoList(ToDoListClass.removeItem(todoList, index));
+            }}
+          />
         </div>
       )}
     </Draggable>

@@ -11,7 +11,6 @@ describe('ToDoList component', () => {
     expect(screen.getByText(/2024-12-15/)).toBeInTheDocument();
   });
   it.todo('Should mark as complete when clicking the checkbox');
-  it.todo('Should remove the task when clicking the delete icon');
   it.todo('Should filter tasks by uncompleted');
   it.todo('Should filter tasks by completed');
   it.todo('Should sort tasks by due data');
