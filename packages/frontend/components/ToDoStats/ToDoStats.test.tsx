@@ -1,5 +1,6 @@
 import React from 'react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+import * as recoil from 'recoil';
 import { screen, render } from '../../test-utils';
 import ToDoStats from './ToDoStats';
 
@@ -7,19 +8,28 @@ describe('ToDoStats component', () => {
   it('Should show the total number of tasks', () => {
     render(<ToDoStats />);
     expect(screen.getByText('Total Tasks')).toBeInTheDocument();
-    expect(screen.getByText('5')).toBeDefined();
+    expect(screen.getByLabelText('Total Tasks')).toHaveTextContent('5');
   });
   it('Should show the percentage of completed tasks', () => {
     render(<ToDoStats />);
     expect(screen.getByText('Completed Tasks')).toBeInTheDocument();
-    expect(screen.getByText('1')).toBeDefined();
+    expect(screen.getByLabelText('Completed Tasks')).toHaveTextContent('1');
   });
   it('Should show the total number of over due tasks', () => {
     render(<ToDoStats />);
     expect(screen.getByText('Overdue Tasks')).toBeInTheDocument();
-    expect(screen.getByText('2')).toBeDefined();
+    expect(screen.getByLabelText('Overdue Tasks')).toHaveTextContent('2');
   });
-  it.todo('Should update the stats when adding a task');
-  it.todo('Should update the stats when removing a task');
-  it.todo('Should not update the stats even when filtering tasks');
+  it('Should update the stats when useRecoilValue has changed', () => {
+    vi.spyOn(recoil, 'useRecoilValue').mockImplementation(() => ({
+      totalTasks: 6,
+      totalCompletedTasks: 2,
+      totalOverdueTasks: 3,
+      tasksByCategory: { Work: 4, Personal: 2 },
+    }));
+    render(<ToDoStats />);
+    expect(screen.getByLabelText('Total Tasks')).toHaveTextContent('6');
+    expect(screen.getByLabelText('Completed Tasks')).toHaveTextContent('2');
+    expect(screen.getByLabelText('Overdue Tasks')).toHaveTextContent('3');
+  });
 });

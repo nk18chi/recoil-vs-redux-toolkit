@@ -8,7 +8,7 @@ describe('ToDoList component', () => {
     render(<ToDoList />);
     expect(screen.getByText('Finish the Project')).toBeInTheDocument();
     expect(screen.findByText(/Work/)).toBeDefined();
-    expect(screen.getByText(/2024-12-15/)).toBeInTheDocument();
+    expect(screen.getByText(/2024-08-15/)).toBeInTheDocument();
   });
   it.todo('Should mark as complete when clicking the checkbox');
   it.todo('Should filter tasks by uncompleted');
