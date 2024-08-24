@@ -5,6 +5,7 @@ import { IconSearch } from '@tabler/icons-react';
 function ToDoSearchInput(props: TextInputProps) {
   return (
     <TextInput
+      id="todo-search-input"
       radius="xl"
       size="md"
       placeholder="Search Tasks"

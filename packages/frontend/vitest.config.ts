@@ -15,8 +15,9 @@ export default defineConfig({
       exclude: [
         ...defaultExclude,
         '**/.next/**',
-        '**/*.{interface,enum,test}.ts?(x)',
+        '**/*.{interface,enum,test,defaultData}.ts?(x)',
         '**/test-utils/**',
+        'app/layout.tsx',
         'next-env.d.ts',
         'postcss.config.mjs',
         'tailwind.config.ts',

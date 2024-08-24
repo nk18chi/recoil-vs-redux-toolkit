@@ -14,7 +14,7 @@ interface IToDoForm {
   dueDate?: Date | null;
 }
 
-interface ToDoFormProps {
+export interface ToDoFormProps {
   onSubmit: (values: IToDoForm) => void;
 }
 

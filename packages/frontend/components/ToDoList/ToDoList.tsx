@@ -24,7 +24,7 @@ function ToDoList() {
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <Checkbox className={classes.symbol} />
+          <Checkbox id={`todo-checkbox-${item.id}`} className={classes.symbol} />
           <Stack gap="0">
             <Text td={item.completed ? 'line-through' : ''}>{item.title}</Text>
             <Text c="dimmed" size="sm">

@@ -18,8 +18,8 @@ function ToDoAddModal() {
           onSubmit={(values) => {
             setTodoList((prev) => {
               const newTodo: IToDo = {
-                id: prev.length + 1,
                 ...values,
+                id: prev.length + 1,
                 completed: false,
                 position: prev.length,
                 createdAt: new Date(),

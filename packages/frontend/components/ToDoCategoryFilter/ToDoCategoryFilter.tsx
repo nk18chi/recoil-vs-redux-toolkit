@@ -23,13 +23,20 @@ function ToDoCategoryFilter() {
   const [opened, setOpened] = useState(false);
   const [selected, setSelected] = useState<Category | null>(null);
   const items = data.map((item) => (
-    <Menu.Item onClick={() => setSelected(item.label)} key={item.label}>
+    <Menu.Item onClick={() => setSelected(item.label)} key={item.label} aria-label={item.label}>
       {item.label}
     </Menu.Item>
   ));
 
   return (
-    <Menu onOpen={() => setOpened(true)} onClose={() => setOpened(false)} radius="md" width="target" withinPortal>
+    <Menu
+      id="todo-category-filter"
+      onOpen={() => setOpened(true)}
+      onClose={() => setOpened(false)}
+      radius="md"
+      width="target"
+      withinPortal
+    >
       <Menu.Target>
         <UnstyledButton className={classes.control} data-expanded={opened || undefined}>
           <Group gap="xs">

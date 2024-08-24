@@ -1,0 +1,967 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page component > Should match the snapshot 1`] = `
+<DocumentFragment>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <main
+    class="p-2 pt-10 m-auto max-w-screen-md items-stretch m_6d731127 mantine-Stack-root"
+    style="--stack-gap: var(--mantine-spacing-md); --stack-align: stretch; --stack-justify: flex-start;"
+  >
+    <h1
+      class="text-center m_8a5d1357 mantine-Title-root"
+      data-order="1"
+      style="--title-fw: var(--mantine-h1-font-weight); --title-lh: var(--mantine-h1-line-height); --title-fz: var(--mantine-h1-font-size);"
+    >
+      ToDo List with Recoil
+    </h1>
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-r2{--sg-spacing-x:var(--mantine-spacing-md);--sg-spacing-y:var(--mantine-spacing-md);--sg-cols:1;}@media(min-width: 48em){.__m__-r2{--sg-cols:3;}}
+    </style>
+    <div
+      class="m_2415a157 mantine-SimpleGrid-root __m__-r2"
+    >
+      <div
+        class="m_1b7284a3 mantine-Paper-root"
+        data-with-border="true"
+        style="--paper-radius: var(--mantine-radius-md);"
+      >
+        <div
+          class="m_4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <div
+            class="m_b32e4812 mantine-RingProgress-root"
+            style="--rp-size: calc(5rem * var(--mantine-scale)); --rp-label-offset: calc(1rem * var(--mantine-scale));"
+          >
+            <svg
+              class="m_d43b5134 mantine-RingProgress-svg"
+            >
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="0, 175.92918860102841"
+                stroke-dashoffset="0"
+                stroke-linecap="butt"
+                stroke-width="8"
+                transform="scale(1, -1) translate(0, -80)"
+              />
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="70.37167544041137, 105.55751316061705"
+                stroke-dashoffset="175.92918860102841"
+                stroke-linecap="round"
+                stroke-width="8"
+                style="--curve-color: var(--mantine-color-blue-filled);"
+              />
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="0, 175.92918860102841"
+                stroke-dashoffset="0"
+                stroke-linecap="round"
+                stroke-width="8"
+                style="--curve-color: var(--mantine-color-gray-filled);"
+              />
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="105.55751316061705, 70.37167544041137"
+                stroke-dashoffset="105.55751316061705"
+                stroke-linecap="butt"
+                stroke-width="8"
+                style="--curve-color: var(--mantine-color-red-filled);"
+              />
+            </svg>
+          </div>
+          <div>
+            <p
+              class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+              data-size="xs"
+              style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); font-weight: 700; text-transform: uppercase;"
+            >
+              Total Tasks
+            </p>
+            <p
+              aria-label="Total Tasks"
+              class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+              data-size="xl"
+              style="--text-fz: var(--mantine-font-size-xl); --text-lh: var(--mantine-line-height-xl); font-weight: 700;"
+            >
+              5
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="m_1b7284a3 mantine-Paper-root"
+        data-with-border="true"
+        style="--paper-radius: var(--mantine-radius-md);"
+      >
+        <div
+          class="m_4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <div
+            class="m_b32e4812 mantine-RingProgress-root"
+            style="--rp-size: calc(5rem * var(--mantine-scale)); --rp-label-offset: calc(1rem * var(--mantine-scale));"
+          >
+            <svg
+              class="m_d43b5134 mantine-RingProgress-svg"
+            >
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="140.74335088082273, 35.18583772020568"
+                stroke-dashoffset="0"
+                stroke-linecap="butt"
+                stroke-width="8"
+                transform="scale(1, -1) translate(0, -80)"
+              />
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="35.18583772020568, 140.74335088082273"
+                stroke-dashoffset="175.92918860102841"
+                stroke-linecap="round"
+                stroke-width="8"
+                style="--curve-color: var(--mantine-color-teal-filled);"
+              />
+            </svg>
+          </div>
+          <div>
+            <p
+              class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+              data-size="xs"
+              style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); font-weight: 700; text-transform: uppercase;"
+            >
+              Completed Tasks
+            </p>
+            <p
+              aria-label="Completed Tasks"
+              class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+              data-size="xl"
+              style="--text-fz: var(--mantine-font-size-xl); --text-lh: var(--mantine-line-height-xl); font-weight: 700;"
+            >
+              1
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="m_1b7284a3 mantine-Paper-root"
+        data-with-border="true"
+        style="--paper-radius: var(--mantine-radius-md);"
+      >
+        <div
+          class="m_4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <div
+            class="m_b32e4812 mantine-RingProgress-root"
+            style="--rp-size: calc(5rem * var(--mantine-scale)); --rp-label-offset: calc(1rem * var(--mantine-scale));"
+          >
+            <svg
+              class="m_d43b5134 mantine-RingProgress-svg"
+            >
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="105.55751316061705, 70.37167544041137"
+                stroke-dashoffset="0"
+                stroke-linecap="butt"
+                stroke-width="8"
+                transform="scale(1, -1) translate(0, -80)"
+              />
+              <circle
+                class="m_b1ca1fbf mantine-RingProgress-curve"
+                cx="40"
+                cy="40"
+                fill="none"
+                r="28"
+                stroke-dasharray="70.37167544041137, 105.55751316061705"
+                stroke-dashoffset="175.92918860102841"
+                stroke-linecap="round"
+                stroke-width="8"
+                style="--curve-color: var(--mantine-color-red-filled);"
+              />
+            </svg>
+          </div>
+          <div>
+            <p
+              class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+              data-size="xs"
+              style="--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); font-weight: 700; text-transform: uppercase;"
+            >
+              Overdue Tasks
+            </p>
+            <p
+              aria-label="Overdue Tasks"
+              class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+              data-size="xl"
+              style="--text-fz: var(--mantine-font-size-xl); --text-lh: var(--mantine-line-height-xl); font-weight: 700;"
+            >
+              2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="m_6d731127 mantine-Stack-root"
+      style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;"
+    >
+      <div
+        class="m_8bffd616 mantine-Flex-root __m__-r14"
+        style="gap: calc(0.25rem * var(--mantine-scale)); align-items: center; justify-content: space-between; flex-wrap: wrap; flex-direction: row; min-height: calc(3.125rem * var(--mantine-scale));"
+      >
+        <div
+          class="_header_5d33da"
+        >
+          <div
+            class="_inner_5d33da m_7485cace mantine-Container-root"
+          >
+            <div
+              class="_links_5d33da"
+            >
+              <div
+                class="_mainLinks_5d33da m_4081bf90 mantine-Group-root"
+                style="--group-gap: 0rem; --group-align: center; --group-justify: flex-end; --group-wrap: wrap;"
+              >
+                <a
+                  class="mantine-focus-auto m_849cf0da _mainLink_5d33da m_b6d8b162 mantine-Text-root mantine-Anchor-root"
+                  data-active="true"
+                  data-underline="hover"
+                >
+                  All
+                </a>
+                <a
+                  class="mantine-focus-auto m_849cf0da _mainLink_5d33da m_b6d8b162 mantine-Text-root mantine-Anchor-root"
+                  data-underline="hover"
+                >
+                  Incomplete
+                </a>
+                <a
+                  class="mantine-focus-auto m_849cf0da _mainLink_5d33da m_b6d8b162 mantine-Text-root mantine-Anchor-root"
+                  data-underline="hover"
+                >
+                  Complete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          aria-label="Add Task"
+          class="mantine-focus-auto mantine-active m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root"
+          style="--button-color: var(--mantine-color-white);"
+          type="button"
+        >
+          <span
+            class="m_80f1301b mantine-Button-inner"
+          >
+            <span
+              class="m_811560b9 mantine-Button-label"
+            >
+              Add Task
+            </span>
+          </span>
+        </button>
+      </div>
+      <div
+        class="m_3eebeb36 mantine-Divider-root"
+        data-orientation="horizontal"
+        role="separator"
+        style="margin-block: 0rem;"
+      />
+    </div>
+    <div
+      class="m_8bffd616 mantine-Flex-root __m__-r1h"
+      style="gap: calc(0.25rem * var(--mantine-scale)); align-items: center; justify-content: stretch; flex-wrap: wrap; flex-direction: row; min-height: calc(3.125rem * var(--mantine-scale));"
+    >
+      <button
+        aria-controls="todo-category-filter-dropdown"
+        aria-expanded="false"
+        aria-haspopup="menu"
+        class="mantine-focus-auto _control_cad81c m_87cf2631 mantine-UnstyledButton-root"
+        id="todo-category-filter-target"
+        type="button"
+      >
+        <div
+          class="m_4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <span
+            class="_label_cad81c"
+          >
+            Category
+          </span>
+        </div>
+        <svg
+          class="tabler-icon tabler-icon-chevron-down _icon_cad81c"
+          fill="none"
+          height="1rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 9l6 6l6 -6"
+          />
+        </svg>
+      </button>
+      <div
+        class="flex-1 m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+        data-size="md"
+      >
+        <div
+          class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+          data-size="md"
+          data-variant="default"
+          data-with-left-section="true"
+          style="--input-height: var(--input-height-md); --input-fz: var(--mantine-font-size-md); --input-radius: var(--mantine-radius-xl); --input-right-section-width: calc(2.625rem * var(--mantine-scale));"
+        >
+          <div
+            class="m_82577fc2 mantine-Input-section mantine-TextInput-section"
+            data-position="left"
+          >
+            <svg
+              class="tabler-icon tabler-icon-search "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+              />
+              <path
+                d="M21 21l-6 -6"
+              />
+            </svg>
+          </div>
+          <input
+            aria-invalid="false"
+            class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+            data-variant="default"
+            id="todo-search-input"
+            placeholder="Search Tasks"
+          />
+        </div>
+      </div>
+      <button
+        aria-controls="todo-sort-dropdown"
+        aria-expanded="false"
+        aria-haspopup="menu"
+        class="mantine-focus-auto _control_e0205e m_87cf2631 mantine-UnstyledButton-root"
+        id="todo-sort-target"
+        type="button"
+      >
+        <div
+          class="m_4081bf90 mantine-Group-root"
+          style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
+        >
+          <span
+            class="_label_e0205e"
+          >
+            Sort
+          </span>
+        </div>
+        <svg
+          class="tabler-icon tabler-icon-chevron-down _icon_e0205e"
+          fill="none"
+          height="1rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 9l6 6l6 -6"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      data-rfd-droppable-context-id=":r1v:"
+      data-rfd-droppable-id="dnd-list"
+    >
+      <div
+        aria-describedby="rfd-hidden-text-:r1v:-hidden-text-:r20:"
+        class="_item_95737a"
+        data-rfd-drag-handle-context-id=":r1v:"
+        data-rfd-drag-handle-draggable-id="1"
+        data-rfd-draggable-context-id=":r1v:"
+        data-rfd-draggable-id="1"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="_symbol_95737a m_bf2d988c mantine-Checkbox-root m_5f75b09e mantine-Checkbox-root"
+          data-label-position="right"
+          style="--checkbox-color: var(--mantine-color-blue-filled);"
+        >
+          <div
+            class="m_5f6e695e mantine-Checkbox-body"
+          >
+            <div
+              class="m_26062bec mantine-Checkbox-inner"
+              data-label-position="right"
+            >
+              <input
+                class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
+                id="todo-checkbox-1"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="m_bf295423 mantine-Checkbox-icon"
+                fill="none"
+                viewBox="0 0 10 7"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="m_d3ea56bb mantine-Checkbox-labelWrapper"
+            />
+          </div>
+        </div>
+        <div
+          class="m_6d731127 mantine-Stack-root"
+          style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;"
+        >
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+            style="text-decoration: line-through;"
+          >
+            Finish the Project
+          </p>
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+            data-size="sm"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+          >
+            Category: Work • DueDate: 2024-08-15
+          </p>
+        </div>
+        <button
+          aria-label="Delete Icon"
+          class="mantine-focus-auto mantine-active ml-auto m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+          data-variant="white"
+          style="--ai-bg: var(--mantine-color-white); --ai-hover: rgba(252, 252, 252, 1); --ai-color: var(--mantine-color-blue-filled); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          type="button"
+        >
+          <span
+            class="m_8d3afb97 mantine-ActionIcon-icon"
+          >
+            <svg
+              class="tabler-icon tabler-icon-trash "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              style="width: 70%; height: 70%;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 7l16 0"
+              />
+              <path
+                d="M10 11l0 6"
+              />
+              <path
+                d="M14 11l0 6"
+              />
+              <path
+                d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+              />
+              <path
+                d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        aria-describedby="rfd-hidden-text-:r1v:-hidden-text-:r20:"
+        class="_item_95737a"
+        data-rfd-drag-handle-context-id=":r1v:"
+        data-rfd-drag-handle-draggable-id="2"
+        data-rfd-draggable-context-id=":r1v:"
+        data-rfd-draggable-id="2"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="_symbol_95737a m_bf2d988c mantine-Checkbox-root m_5f75b09e mantine-Checkbox-root"
+          data-label-position="right"
+          style="--checkbox-color: var(--mantine-color-blue-filled);"
+        >
+          <div
+            class="m_5f6e695e mantine-Checkbox-body"
+          >
+            <div
+              class="m_26062bec mantine-Checkbox-inner"
+              data-label-position="right"
+            >
+              <input
+                class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
+                id="todo-checkbox-2"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="m_bf295423 mantine-Checkbox-icon"
+                fill="none"
+                viewBox="0 0 10 7"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="m_d3ea56bb mantine-Checkbox-labelWrapper"
+            />
+          </div>
+        </div>
+        <div
+          class="m_6d731127 mantine-Stack-root"
+          style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;"
+        >
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+          >
+            Send the Report
+          </p>
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+            data-size="sm"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+          >
+            Category: Work • DueDate: 2030-08-27
+          </p>
+        </div>
+        <button
+          aria-label="Delete Icon"
+          class="mantine-focus-auto mantine-active ml-auto m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+          data-variant="white"
+          style="--ai-bg: var(--mantine-color-white); --ai-hover: rgba(252, 252, 252, 1); --ai-color: var(--mantine-color-blue-filled); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          type="button"
+        >
+          <span
+            class="m_8d3afb97 mantine-ActionIcon-icon"
+          >
+            <svg
+              class="tabler-icon tabler-icon-trash "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              style="width: 70%; height: 70%;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 7l16 0"
+              />
+              <path
+                d="M10 11l0 6"
+              />
+              <path
+                d="M14 11l0 6"
+              />
+              <path
+                d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+              />
+              <path
+                d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        aria-describedby="rfd-hidden-text-:r1v:-hidden-text-:r20:"
+        class="_item_95737a"
+        data-rfd-drag-handle-context-id=":r1v:"
+        data-rfd-drag-handle-draggable-id="3"
+        data-rfd-draggable-context-id=":r1v:"
+        data-rfd-draggable-id="3"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="_symbol_95737a m_bf2d988c mantine-Checkbox-root m_5f75b09e mantine-Checkbox-root"
+          data-label-position="right"
+          style="--checkbox-color: var(--mantine-color-blue-filled);"
+        >
+          <div
+            class="m_5f6e695e mantine-Checkbox-body"
+          >
+            <div
+              class="m_26062bec mantine-Checkbox-inner"
+              data-label-position="right"
+            >
+              <input
+                class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
+                id="todo-checkbox-3"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="m_bf295423 mantine-Checkbox-icon"
+                fill="none"
+                viewBox="0 0 10 7"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="m_d3ea56bb mantine-Checkbox-labelWrapper"
+            />
+          </div>
+        </div>
+        <div
+          class="m_6d731127 mantine-Stack-root"
+          style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;"
+        >
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+          >
+            Buy Groceries
+          </p>
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+            data-size="sm"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+          >
+            Category: Personal • DueDate: 2030-08-21
+          </p>
+        </div>
+        <button
+          aria-label="Delete Icon"
+          class="mantine-focus-auto mantine-active ml-auto m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+          data-variant="white"
+          style="--ai-bg: var(--mantine-color-white); --ai-hover: rgba(252, 252, 252, 1); --ai-color: var(--mantine-color-blue-filled); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          type="button"
+        >
+          <span
+            class="m_8d3afb97 mantine-ActionIcon-icon"
+          >
+            <svg
+              class="tabler-icon tabler-icon-trash "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              style="width: 70%; height: 70%;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 7l16 0"
+              />
+              <path
+                d="M10 11l0 6"
+              />
+              <path
+                d="M14 11l0 6"
+              />
+              <path
+                d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+              />
+              <path
+                d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        aria-describedby="rfd-hidden-text-:r1v:-hidden-text-:r20:"
+        class="_item_95737a"
+        data-rfd-drag-handle-context-id=":r1v:"
+        data-rfd-drag-handle-draggable-id="4"
+        data-rfd-draggable-context-id=":r1v:"
+        data-rfd-draggable-id="4"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="_symbol_95737a m_bf2d988c mantine-Checkbox-root m_5f75b09e mantine-Checkbox-root"
+          data-label-position="right"
+          style="--checkbox-color: var(--mantine-color-blue-filled);"
+        >
+          <div
+            class="m_5f6e695e mantine-Checkbox-body"
+          >
+            <div
+              class="m_26062bec mantine-Checkbox-inner"
+              data-label-position="right"
+            >
+              <input
+                class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
+                id="todo-checkbox-4"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="m_bf295423 mantine-Checkbox-icon"
+                fill="none"
+                viewBox="0 0 10 7"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="m_d3ea56bb mantine-Checkbox-labelWrapper"
+            />
+          </div>
+        </div>
+        <div
+          class="m_6d731127 mantine-Stack-root"
+          style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;"
+        >
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+          >
+            Read a Book
+          </p>
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+            data-size="sm"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+          >
+            Category: Personal
+          </p>
+        </div>
+        <button
+          aria-label="Delete Icon"
+          class="mantine-focus-auto mantine-active ml-auto m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+          data-variant="white"
+          style="--ai-bg: var(--mantine-color-white); --ai-hover: rgba(252, 252, 252, 1); --ai-color: var(--mantine-color-blue-filled); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          type="button"
+        >
+          <span
+            class="m_8d3afb97 mantine-ActionIcon-icon"
+          >
+            <svg
+              class="tabler-icon tabler-icon-trash "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              style="width: 70%; height: 70%;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 7l16 0"
+              />
+              <path
+                d="M10 11l0 6"
+              />
+              <path
+                d="M14 11l0 6"
+              />
+              <path
+                d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+              />
+              <path
+                d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        aria-describedby="rfd-hidden-text-:r1v:-hidden-text-:r20:"
+        class="_item_95737a"
+        data-rfd-drag-handle-context-id=":r1v:"
+        data-rfd-drag-handle-draggable-id="5"
+        data-rfd-draggable-context-id=":r1v:"
+        data-rfd-draggable-id="5"
+        draggable="false"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="_symbol_95737a m_bf2d988c mantine-Checkbox-root m_5f75b09e mantine-Checkbox-root"
+          data-label-position="right"
+          style="--checkbox-color: var(--mantine-color-blue-filled);"
+        >
+          <div
+            class="m_5f6e695e mantine-Checkbox-body"
+          >
+            <div
+              class="m_26062bec mantine-Checkbox-inner"
+              data-label-position="right"
+            >
+              <input
+                class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
+                id="todo-checkbox-5"
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="m_bf295423 mantine-Checkbox-icon"
+                fill="none"
+                viewBox="0 0 10 7"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4 4.586L1.707 2.293A1 1 0 1 0 .293 3.707l3 3a.997.997 0 0 0 1.414 0l5-5A1 1 0 1 0 8.293.293L4 4.586z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="m_d3ea56bb mantine-Checkbox-labelWrapper"
+            />
+          </div>
+        </div>
+        <div
+          class="m_6d731127 mantine-Stack-root"
+          style="--stack-gap: 0rem; --stack-align: stretch; --stack-justify: flex-start;"
+        >
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+          >
+            Clean the House
+          </p>
+          <p
+            class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+            data-size="sm"
+            style="--text-fz: var(--mantine-font-size-sm); --text-lh: var(--mantine-line-height-sm);"
+          >
+            Category: Personal • DueDate: 2024-08-17
+          </p>
+        </div>
+        <button
+          aria-label="Delete Icon"
+          class="mantine-focus-auto mantine-active ml-auto m_8d3f4000 mantine-ActionIcon-root m_87cf2631 mantine-UnstyledButton-root"
+          data-variant="white"
+          style="--ai-bg: var(--mantine-color-white); --ai-hover: rgba(252, 252, 252, 1); --ai-color: var(--mantine-color-blue-filled); --ai-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
+          type="button"
+        >
+          <span
+            class="m_8d3afb97 mantine-ActionIcon-icon"
+          >
+            <svg
+              class="tabler-icon tabler-icon-trash "
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              style="width: 70%; height: 70%;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 7l16 0"
+              />
+              <path
+                d="M10 11l0 6"
+              />
+              <path
+                d="M14 11l0 6"
+              />
+              <path
+                d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+              />
+              <path
+                d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;

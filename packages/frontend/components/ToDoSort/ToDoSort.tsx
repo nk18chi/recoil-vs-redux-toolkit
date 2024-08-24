@@ -24,7 +24,14 @@ function ToDoSort() {
   ));
 
   return (
-    <Menu onOpen={() => setOpened(true)} onClose={() => setOpened(false)} radius="md" width="target" withinPortal>
+    <Menu
+      id="todo-sort"
+      onOpen={() => setOpened(true)}
+      onClose={() => setOpened(false)}
+      radius="md"
+      width="target"
+      withinPortal
+    >
       <Menu.Target>
         <UnstyledButton className={classes.control} data-expanded={opened || undefined}>
           <Group gap="xs">
