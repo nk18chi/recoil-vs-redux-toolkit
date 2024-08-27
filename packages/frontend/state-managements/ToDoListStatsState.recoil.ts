@@ -11,7 +11,7 @@ const TodoListStatsState = selector({
     const totalTasks = todoList.length;
     const totalCompletedTasks = todoList.filter((todo) => todo.completed).length;
     const totalOverdueTasks = todoList.filter(
-      (todo) => todo.dueDate && todo.dueDate.getTime() < new Date().getTime(),
+      (todo) => !todo.completed && todo.dueDate && todo.dueDate.getTime() < new Date().getTime(),
     ).length;
     const defaultTasksByCategory: TaskByCategory = Object.values(ToDoCategory).reduce((acc, category) => {
       acc[category] = 0;

@@ -194,7 +194,7 @@ exports[`Page component > Should match the snapshot 1`] = `
                 cy="40"
                 fill="none"
                 r="28"
-                stroke-dasharray="105.55751316061705, 70.37167544041137"
+                stroke-dasharray="140.74335088082273, 35.18583772020568"
                 stroke-dashoffset="0"
                 stroke-linecap="butt"
                 stroke-width="8"
@@ -206,7 +206,7 @@ exports[`Page component > Should match the snapshot 1`] = `
                 cy="40"
                 fill="none"
                 r="28"
-                stroke-dasharray="70.37167544041137, 105.55751316061705"
+                stroke-dasharray="35.18583772020568, 140.74335088082273"
                 stroke-dashoffset="175.92918860102841"
                 stroke-linecap="round"
                 stroke-width="8"
@@ -228,7 +228,7 @@ exports[`Page component > Should match the snapshot 1`] = `
               data-size="xl"
               style="--text-fz: var(--mantine-font-size-xl); --text-lh: var(--mantine-line-height-xl); font-weight: 700;"
             >
-              2
+              1
             </p>
           </div>
         </div>

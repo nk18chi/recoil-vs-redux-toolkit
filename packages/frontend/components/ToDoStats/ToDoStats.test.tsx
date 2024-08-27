@@ -18,7 +18,7 @@ describe('ToDoStats component', () => {
   it('Should show the total number of over due tasks', () => {
     render(<ToDoStats />);
     expect(screen.getByText('Overdue Tasks')).toBeInTheDocument();
-    expect(screen.getByLabelText('Overdue Tasks')).toHaveTextContent('2');
+    expect(screen.getByLabelText('Overdue Tasks')).toHaveTextContent('1');
   });
   it('Should update the stats when useRecoilValue has changed', () => {
     vi.spyOn(recoil, 'useRecoilValue').mockImplementation(() => ({
