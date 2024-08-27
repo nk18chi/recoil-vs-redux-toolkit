@@ -78,7 +78,40 @@ describe('ToDoList component', () => {
     expect(setTodoListSpy).toHaveBeenCalledTimes(1);
     expect(setTodoListSpy).toHaveBeenCalledWith(defaultToDoList);
   });
-  it.todo('Should mark as complete when clicking the checkbox');
+  it('Should have title with strikethrough when the task is completed', () => {
+    render(<ToDoList />);
+    const task = screen.getByText('Finish the Project');
+    expect(task).toHaveStyle('text-decoration: line-through');
+    const checkbox = screen.getByRole('checkbox', { name: 'todo-checkbox-1' });
+    expect(checkbox).toBeChecked();
+  });
+  it('Should mark as complete when clicking the checkbox', () => {
+    render(<ToDoList />);
+    const checkbox = screen.getByRole('checkbox', { name: 'todo-checkbox-2' });
+    expect(checkbox).not.toBeChecked();
+    act(() => {
+      checkbox.click();
+    });
+    expect(setTodoListSpy).toHaveBeenCalledTimes(1);
+    expect(setTodoListSpy).toHaveBeenCalledWith([
+      defaultToDoList[0],
+      { ...defaultToDoList[1], completed: true },
+      ...defaultToDoList.slice(2),
+    ]);
+  });
+  it('Should mark as incomplete when clicking the checkbox again', () => {
+    render(<ToDoList />);
+    const checkbox = screen.getByRole('checkbox', { name: 'todo-checkbox-1' });
+    expect(checkbox).toBeChecked();
+    act(() => {
+      checkbox.click();
+    });
+    expect(setTodoListSpy).toHaveBeenCalledTimes(1);
+    expect(setTodoListSpy).toHaveBeenCalledWith([
+      { ...defaultToDoList[0], completed: false },
+      ...defaultToDoList.slice(1),
+    ]);
+  });
   it.todo('Should filter tasks by uncompleted');
   it.todo('Should filter tasks by completed');
   it.todo('Should sort tasks by due data');

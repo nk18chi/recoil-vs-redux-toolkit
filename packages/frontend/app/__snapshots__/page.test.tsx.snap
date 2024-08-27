@@ -449,6 +449,8 @@ exports[`Page component > Should match the snapshot 1`] = `
               data-label-position="right"
             >
               <input
+                aria-label="todo-checkbox-1"
+                checked=""
                 class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
                 id="todo-checkbox-1"
                 type="checkbox"
@@ -557,6 +559,7 @@ exports[`Page component > Should match the snapshot 1`] = `
               data-label-position="right"
             >
               <input
+                aria-label="todo-checkbox-2"
                 class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
                 id="todo-checkbox-2"
                 type="checkbox"
@@ -664,6 +667,7 @@ exports[`Page component > Should match the snapshot 1`] = `
               data-label-position="right"
             >
               <input
+                aria-label="todo-checkbox-3"
                 class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
                 id="todo-checkbox-3"
                 type="checkbox"
@@ -771,6 +775,7 @@ exports[`Page component > Should match the snapshot 1`] = `
               data-label-position="right"
             >
               <input
+                aria-label="todo-checkbox-4"
                 class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
                 id="todo-checkbox-4"
                 type="checkbox"
@@ -878,6 +883,7 @@ exports[`Page component > Should match the snapshot 1`] = `
               data-label-position="right"
             >
               <input
+                aria-label="todo-checkbox-5"
                 class="mantine-focus-auto m_26063560 mantine-Checkbox-input"
                 id="todo-checkbox-5"
                 type="checkbox"

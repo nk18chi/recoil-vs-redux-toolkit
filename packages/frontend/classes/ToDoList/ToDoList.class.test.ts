@@ -43,4 +43,34 @@ describe('ToDoList class', () => {
       expect(ToDoList.removeItem(defaultToDoList, 100)).toEqual(defaultToDoList);
     });
   });
+  describe('setCompletionStatus', () => {
+    it('Should mark as completed', () => {
+      const todoList = _.cloneDeep(defaultToDoList);
+      expect(ToDoList.setCompletionStatus({ todoList, index: 1, completed: true })).toEqual([
+        defaultToDoList[0],
+        { ...defaultToDoList[1], completed: true },
+        ...defaultToDoList.slice(2),
+      ]);
+      expect(todoList).toEqual(defaultToDoList); // check if there is no side effect
+    });
+    it('Should mark as incomplete', () => {
+      const todoList = _.cloneDeep(defaultToDoList);
+      expect(ToDoList.setCompletionStatus({ todoList, index: 1, completed: false })).toEqual([
+        defaultToDoList[0],
+        { ...defaultToDoList[1], completed: false },
+        ...defaultToDoList.slice(2),
+      ]);
+      expect(todoList).toEqual(defaultToDoList); // check if there is no side effect
+    });
+    it('Should return the todo list as it is when index is negative', () => {
+      expect(ToDoList.setCompletionStatus({ todoList: defaultToDoList, index: -1, completed: true })).toEqual(
+        defaultToDoList,
+      );
+    });
+    it('Should return the todo list as it is when index is greater than the todo size', () => {
+      expect(ToDoList.setCompletionStatus({ todoList: defaultToDoList, index: 100, completed: true })).toEqual(
+        defaultToDoList,
+      );
+    });
+  });
 });

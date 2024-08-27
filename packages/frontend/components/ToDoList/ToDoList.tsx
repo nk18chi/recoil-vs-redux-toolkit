@@ -24,7 +24,15 @@ function ToDoList() {
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <Checkbox id={`todo-checkbox-${item.id}`} className={classes.symbol} />
+          <Checkbox
+            id={`todo-checkbox-${item.id}`}
+            className={classes.symbol}
+            aria-label={`todo-checkbox-${item.id}`}
+            defaultChecked={item.completed}
+            onChange={(event) => {
+              setTodoList(ToDoListClass.setCompletionStatus({ todoList, index, completed: event.target.checked }));
+            }}
+          />
           <Stack gap="0">
             <Text td={item.completed ? 'line-through' : ''}>{item.title}</Text>
             <Text c="dimmed" size="sm">
