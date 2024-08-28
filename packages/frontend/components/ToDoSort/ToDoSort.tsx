@@ -3,20 +3,19 @@
 import React, { useState } from 'react';
 import { UnstyledButton, Menu, Group } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
+import ToDoListSort from '@/classes/ToDoList/ToDoListSort.enum';
 import classes from './ToDoSort.module.css';
 
-enum Sort {
-  Priority = 'Priority',
-  Newest = 'Newest',
-  Oldest = 'Oldest',
-  Overdue = 'Overdue',
-}
-
-const data = [{ label: Sort.Priority }, { label: Sort.Newest }, { label: Sort.Oldest }, { label: Sort.Overdue }];
+const data = [
+  { label: ToDoListSort.Priority },
+  { label: ToDoListSort.Newest },
+  { label: ToDoListSort.Oldest },
+  { label: ToDoListSort.Overdue },
+];
 
 function ToDoSort() {
   const [opened, setOpened] = useState(false);
-  const [selected, setSelected] = useState<Sort | null>(null);
+  const [selected, setSelected] = useState<ToDoListSort | null>(null);
   const items = data.map((item) => (
     <Menu.Item onClick={() => setSelected(item.label)} key={item.label}>
       {item.label}
