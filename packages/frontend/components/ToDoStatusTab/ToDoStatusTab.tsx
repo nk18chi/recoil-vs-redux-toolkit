@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { Container, Anchor, Group, Box } from '@mantine/core';
+import { useSetRecoilState } from 'recoil';
+import todoListFiltersState from '@/state-managements/ToDoListFiltersState.recoil';
 import classes from './ToDoStatusTab.module.css';
 
 enum Status {
@@ -13,6 +15,7 @@ enum Status {
 const mainLinks = [{ label: Status.All }, { label: Status.Incomplete }, { label: Status.Complete }];
 
 function ToDoStatusTab() {
+  const setToDoListFilters = useSetRecoilState(todoListFiltersState);
   const [active, setActive] = useState(0);
 
   const mainItems = mainLinks.map((item, index) => (
@@ -23,6 +26,24 @@ function ToDoStatusTab() {
       onClick={(event) => {
         event.preventDefault();
         setActive(index);
+        setToDoListFilters((prev) => {
+          const completed = () => {
+            switch (item.label) {
+              case Status.All:
+                return undefined;
+              case Status.Complete:
+                return true;
+              case Status.Incomplete:
+                return false;
+              default:
+                return undefined;
+            }
+          };
+          return {
+            ...prev,
+            completed: completed(),
+          };
+        });
       }}
     >
       {item.label}
