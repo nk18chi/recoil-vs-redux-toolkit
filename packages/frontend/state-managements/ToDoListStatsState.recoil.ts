@@ -4,7 +4,7 @@ import ToDoListState from './ToDoListState.recoil';
 
 type TaskByCategory = { [key in ToDoCategory]: number };
 
-const TodoListStatsState = selector({
+const todoListStatsState = selector({
   key: 'ToDoListStatsState',
   get: ({ get }) => {
     const todoList = get(ToDoListState);
@@ -30,4 +30,4 @@ const TodoListStatsState = selector({
   },
 });
 
-export default TodoListStatsState;
+export default todoListStatsState;
