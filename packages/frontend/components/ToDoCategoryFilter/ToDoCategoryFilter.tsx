@@ -3,27 +3,46 @@
 import React, { useState } from 'react';
 import { UnstyledButton, Menu, Group } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
+import todoListFiltersState from '@/state-managements/ToDoListFiltersState.recoil';
+import { useSetRecoilState } from 'recoil';
+import ToDoCategory from '@/classes/ToDo/ToDoCategory.enum';
 import classes from './ToDoCategoryFilter.module.css';
-
-enum Category {
-  All = 'All',
-  Work = 'Work',
-  Personal = 'Personal',
-  Other = 'Other',
-}
+import ToDoCategoryFilterEnum from './ToDoCategoryFilterEnum';
 
 const data = [
-  { label: Category.All },
-  { label: Category.Work },
-  { label: Category.Personal },
-  { label: Category.Other },
+  { label: ToDoCategoryFilterEnum.All },
+  { label: ToDoCategoryFilterEnum.Work },
+  { label: ToDoCategoryFilterEnum.Personal },
+  { label: ToDoCategoryFilterEnum.Other },
 ];
 
 function ToDoCategoryFilter() {
   const [opened, setOpened] = useState(false);
-  const [selected, setSelected] = useState<Category | null>(null);
+  const [selected, setSelected] = useState<ToDoCategoryFilterEnum | null>(null);
+  const setToDoListFilters = useSetRecoilState(todoListFiltersState);
   const items = data.map((item) => (
-    <Menu.Item onClick={() => setSelected(item.label)} key={item.label} aria-label={item.label}>
+    <Menu.Item
+      onClick={() => {
+        setSelected(item.label);
+        setToDoListFilters((prev) => {
+          const category = () => {
+            switch (item.label) {
+              case ToDoCategoryFilterEnum.All:
+                return undefined;
+              default:
+                /* v8 ignore next-line */
+                return ToDoCategory[item.label] || undefined;
+            }
+          };
+          return {
+            ...prev,
+            category: category(),
+          };
+        });
+      }}
+      key={item.label}
+      aria-label={item.label}
+    >
       {item.label}
     </Menu.Item>
   ));
