@@ -14,5 +14,4 @@ describe('ToDoSearchInput component', () => {
     fireEvent.change(inputBox, { target: { value: 'Finish' } });
     expect(inputBox).toHaveValue('Finish');
   });
-  it.todo('Should show no result message');
 });

@@ -20,5 +20,4 @@ describe('ToDoSearch component', () => {
     expect(screen.queryByText('Category')).not.toBeInTheDocument();
     expect(screen.queryAllByText(category)[0]).toBeInTheDocument();
   });
-  it.todo('Should show no result message');
 });
