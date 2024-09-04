@@ -8,8 +8,8 @@ describe('ToDoList class', () => {
     it('Should return the reordered todo list', () => {
       const todoList = _.cloneDeep(defaultToDoList);
       expect(ToDoList.reorder({ todoList: defaultToDoList, from: { todoId: 1 }, to: { todoId: 2 } })).toEqual([
-        defaultToDoList[1],
-        defaultToDoList[0],
+        { ...defaultToDoList[1], position: 0 },
+        { ...defaultToDoList[0], position: 1 },
         ...defaultToDoList.slice(2),
       ]);
       expect(todoList).toEqual(defaultToDoList); // check if there is no side effect

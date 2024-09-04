@@ -25,10 +25,10 @@ class ToDoList {
       return todoList;
     }
     const cloned = _.cloneDeep(todoList);
-    const item = todoList[fromTaskIndex];
+    const item = cloned[fromTaskIndex];
     cloned.splice(fromTaskIndex, 1);
     cloned.splice(toTaskIndex, 0, item);
-    return cloned;
+    return cloned.map((task, index) => ({ ...task, position: index }));
   }
 
   public static removeItem(todoList: IToDo[], todoId: number): IToDo[] {

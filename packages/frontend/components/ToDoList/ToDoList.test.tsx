@@ -60,9 +60,9 @@ describe('ToDoList component', () => {
     });
     expect(setTodoListSpy).toHaveBeenCalledTimes(1);
     expect(setTodoListSpy).toHaveBeenCalledWith([
-      defaultToDoList[1],
-      defaultToDoList[2],
-      defaultToDoList[0],
+      { ...defaultToDoList[1], position: 0 },
+      { ...defaultToDoList[2], position: 1 },
+      { ...defaultToDoList[0], position: 2 },
       ...defaultToDoList.slice(3),
     ]);
   });
