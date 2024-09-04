@@ -2,44 +2,46 @@ import _ from 'lodash';
 import IToDo from '../ToDo/ToDo.interface';
 
 interface IReorderInput {
-  todo: IToDo[];
-  from: number;
-  to: number;
+  todoList: IToDo[];
+  from: {
+    todoId: number;
+  };
+  to: {
+    todoId: number;
+  };
 }
 
 interface SetCompletionStatusProps {
   todoList: IToDo[];
-  index: number;
+  todoId: number;
   completed: boolean;
 }
 
 class ToDoList {
-  public static reorder({ todo, from, to }: IReorderInput): IToDo[] {
-    if (from < 0 || from >= todo.length) {
-      return todo;
+  public static reorder({ todoList, from, to }: IReorderInput): IToDo[] {
+    const fromTaskIndex = todoList.findIndex((task) => task.id === from.todoId);
+    const toTaskIndex = todoList.findIndex((task) => task.id === to.todoId);
+    if (fromTaskIndex === -1 || toTaskIndex === -1) {
+      return todoList;
     }
-    if (to < 0 || to >= todo.length) {
-      return todo;
-    }
-    if (from >= to) {
-      return todo;
-    }
-    const cloned = _.cloneDeep(todo);
-    const item = todo[from];
-    cloned.splice(from, 1);
-    cloned.splice(to, 0, item);
+    const cloned = _.cloneDeep(todoList);
+    const item = todoList[fromTaskIndex];
+    cloned.splice(fromTaskIndex, 1);
+    cloned.splice(toTaskIndex, 0, item);
     return cloned;
   }
 
-  public static removeItem(todo: IToDo[], index: number): IToDo[] {
-    if (index < 0 || index >= todo.length) {
-      return todo;
+  public static removeItem(todoList: IToDo[], todoId: number): IToDo[] {
+    const index = todoList.findIndex((todo) => todo.id === todoId);
+    if (index === -1) {
+      return todoList;
     }
-    return [...todo.slice(0, index), ...todo.slice(index + 1)];
+    return [...todoList.slice(0, index), ...todoList.slice(index + 1)];
   }
 
-  public static setCompletionStatus({ todoList, index, completed }: SetCompletionStatusProps): IToDo[] {
-    if (index < 0 || index >= todoList.length) {
+  public static setCompletionStatus({ todoList, todoId, completed }: SetCompletionStatusProps): IToDo[] {
+    const index = todoList.findIndex((todo) => todo.id === todoId);
+    if (index === -1) {
       return todoList;
     }
     const cloned = _.cloneDeep(todoList);

@@ -6,16 +6,18 @@ import React from 'react';
 import cx from 'clsx';
 import { Stack, Text, Checkbox } from '@mantine/core';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import filteredTodoListState from '@/state-managements/FilteredToDoListState.recoil';
 import todoListState from '../../state-managements/ToDoListState.recoil';
 import classes from './ToDoList.module.css';
 import ToDoListClass from '../../classes/ToDoList/ToDoList.class';
 import ToDoDeleteIcon from '../ToDoDeleteIcon/ToDoDeleteIcon';
 
 function ToDoList() {
+  const filteredTodoList = useRecoilValue(filteredTodoListState);
   const [todoList, setTodoList] = useRecoilState(todoListState);
 
-  const items = todoList.map((item, index) => (
+  const items = filteredTodoList.map((item, index) => (
     <Draggable key={item.id} index={index} draggableId={item.id.toString()}>
       {(provided, snapshot) => (
         <div
@@ -30,7 +32,9 @@ function ToDoList() {
             aria-label={`todo-checkbox-${item.id}`}
             defaultChecked={item.completed}
             onChange={(event) => {
-              setTodoList(ToDoListClass.setCompletionStatus({ todoList, index, completed: event.target.checked }));
+              setTodoList(
+                ToDoListClass.setCompletionStatus({ todoList, todoId: item.id, completed: event.target.checked }),
+              );
             }}
           />
           <Stack gap="0">
@@ -46,7 +50,7 @@ function ToDoList() {
           </Stack>
           <ToDoDeleteIcon
             onClick={() => {
-              setTodoList(ToDoListClass.removeItem(todoList, index));
+              setTodoList(ToDoListClass.removeItem(todoList, item.id));
             }}
           />
         </div>
@@ -57,7 +61,15 @@ function ToDoList() {
   return (
     <DragDropContext
       onDragEnd={({ destination, source }) => {
-        setTodoList(ToDoListClass.reorder({ todo: todoList, from: source.index, to: destination?.index || 0 }));
+        setTodoList(
+          ToDoListClass.reorder({
+            todoList,
+            from: { todoId: filteredTodoList[source.index].id },
+            to: {
+              todoId: filteredTodoList[destination?.index || 0].id,
+            },
+          }),
+        );
       }}
     >
       <Droppable droppableId="dnd-list" direction="vertical">

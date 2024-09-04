@@ -21,7 +21,32 @@ describe('ToDoStatusTab component', () => {
       expect(incompleteTab.getAttribute('data-active')).toBe('true');
     });
   });
-  it.todo('Should filter by complete status');
-  it.todo('Should reset the status filter as default');
-  it.todo('Should show no result message if there is no todo');
+  it('Should filter by complete status', async () => {
+    render(<ToDoStatusTab />);
+    const completeTab = screen.getByText('Complete');
+    expect(completeTab).toBeInTheDocument();
+    act(() => {
+      completeTab.click();
+    });
+    await waitFor(() => {
+      expect(completeTab.getAttribute('data-active')).toBe('true');
+    });
+  });
+  it('Should reset the status filter as default', async () => {
+    render(<ToDoStatusTab />);
+    const completeTab = screen.getByText('Complete');
+    act(() => {
+      completeTab.click();
+    });
+    await waitFor(() => {
+      expect(completeTab.getAttribute('data-active')).toBe('true');
+    });
+    const allTab = screen.getByText('All');
+    act(() => {
+      allTab.click();
+    });
+    await waitFor(() => {
+      expect(allTab.getAttribute('data-active')).toBe('true');
+    });
+  });
 });

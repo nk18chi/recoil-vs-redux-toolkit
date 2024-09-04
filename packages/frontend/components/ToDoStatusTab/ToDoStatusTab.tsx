@@ -35,7 +35,9 @@ function ToDoStatusTab() {
                 return true;
               case Status.Incomplete:
                 return false;
+              /* v8 ignore next-line */
               default:
+                /* v8 ignore next-line */
                 return undefined;
             }
           };

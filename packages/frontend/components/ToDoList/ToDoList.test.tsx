@@ -115,4 +115,5 @@ describe('ToDoList component', () => {
   it.todo('Should filter tasks by uncompleted');
   it.todo('Should filter tasks by completed');
   it.todo('Should sort tasks by due data');
+  it.todo('Should show no result message if there is no todo');
 });
