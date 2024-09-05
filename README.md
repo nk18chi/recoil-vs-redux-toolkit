@@ -1,15 +1,16 @@
-# Mongoose-Graphql-Dataloader
+# ToDo app with Recoil
 
-The sample project as the state management comparison between Recoil and Redux-toolkit
+- The sample todo application with Recoil as the state management
+- 100% test coverage with vitest and react testing library
 
 ## Tech Stack
 
 - Node (v20.10.0)
 - Typescript
+- Lerna
 - Next 14
 - React 18
 - Recoil
-- Redux-toolkit
 
 ### Code Formatter
 
